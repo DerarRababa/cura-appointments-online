@@ -13,6 +13,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.1",
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",

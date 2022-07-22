@@ -21,7 +21,7 @@ module.exports = {
       red: colors.red,
       green: colors.green,
       orange: colors.orange,
-    
+    $blue:'#4894FE',
       $gray: "#E1E1E1",
      
     },
