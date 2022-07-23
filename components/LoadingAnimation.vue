@@ -5,7 +5,6 @@
   >
     <div
       class="text-line"
-      :class="{ 'rounded-full': isRounded }"
       v-for="item in numberOFItem"
       :key="item"
       :style="{
@@ -34,7 +33,6 @@ export default {
     "width",
     "height",
     "spaceItems",
-    "isRounded",
   ],
 };
 </script>
