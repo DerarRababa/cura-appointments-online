@@ -16,7 +16,8 @@
                   ? ' bg-$blue text-white'
                   : 'bg-white  shadow-md  text-black'
               "
-              class="px-2 w-12 py-2 cursor-pointer mt-1 rounded-lg flex flex-col items-center"
+              class="px-2 w-12 py-2 cursor-pointer mt-1 rounded-lg flex flex-col items-center 
+              transition  delay-100 hover:text-white hover:bg-blue-500 duration-300 "
             >
               <span class="font-semibold text-sm">{{
                 scheduleDate.availability.day.substring(0, 3).toUpperCase()

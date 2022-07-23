@@ -7,7 +7,8 @@
         )
       "
       :title="`the detector is not available from ${time.from_unix} to ${time.to_unix}`"
-      class="px-2 py-2 cursor-pointer text-$gray bg-white rounded-lg flex flex-col items-center w-24 m-1"
+      class="px-2 py-2 cursor-pointer text-$gray bg-white rounded-lg flex flex-col items-center w-24 m-1
+      "
       v-for="(time, $index) in unavailableTimes"
       :key="'#' + $index"
     >
@@ -16,7 +17,8 @@
     <button
       @click="bookTime(time)"
       :title="`the detector is available from ${time.from_unix} to ${time.to_unix}`"
-      class="px-2 py-2 cursor-pointer rounded-lg flex flex-col items-center w-24 m-1"
+      class="px-2 py-2 cursor-pointer rounded-lg flex flex-col items-center w-24 m-1
+      transition  delay-100 hover:text-white hover:bg-blue-500 duration-300"
       :class="
         timeSlected == time ? ' bg-$blue text-white' : 'bg-white shadow-md'
       "

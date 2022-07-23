@@ -3,7 +3,7 @@
   <div class="bg-white p-4 flex items-center justify-center min-h-screen">
     <main class="w-96 max-w-full">
       <h1 class="font-semibold text-xl mb-1">Schedule Appointment</h1>
-      <section class="border-2 border-$gray rounded-xl w-full px-7 py-4">
+      <section class="border-2 border-$gray rounded-xl w-full px-7 py-4 hover:shadow-xl transition  delay-100 duration-300">
         <h4
           class="flex justify-between items-center border-b-2 border-$gray pb-2"
         >
@@ -45,7 +45,7 @@
 
       <button
         @click="bookAppointment"
-        :class="activeBookBTN ? 'bg-$blue  ' : ' bg-$gray'"
+        :class="activeBookBTN ? 'bg-$blue  hover:shadow-xl transition  delay-100 duration-300 ' : ' bg-$gray'"
         class="mt-3 font-semibold w-full text-white rounded-lg py-3 flex items-center justify-center"
       >
         <span class="px-3"> Book Appointment </span>
