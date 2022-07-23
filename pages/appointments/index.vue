@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="bg-white flex items-center justify-center min-h-screen">
-    <main class="w-96">
+  <div class="bg-white p-4 flex items-center justify-center min-h-screen">
+    <main class="w-96 max-w-full">
       <h1 class="font-semibold text-xl mb-1">Schedule Appointment</h1>
       <section class="border-2 border-$gray rounded-xl w-full px-7 py-4">
         <h4
@@ -13,20 +13,33 @@
 
         <section class="mt-2">
           <h4 class="font-semibold text-base">Schedule</h4>
-
+<article  class=" h-16">
           <AppointmentsDates
+          v-if="availableAppointments"
             @selectAvailabilityDate="selectAvailabilityDate"
             :scheduleData="availableAppointments.schedule"
           ></AppointmentsDates>
+          
+           <LoadingAnimation
+            v-else
+            :spaceItems="5"
+            itemDirection="H"
+            width="48"
+            height="60"
+            :numberOFItem="5"
+          ></LoadingAnimation>
+</article>
         </section>
         <section class="mt-2">
           <h4 class="font-semibold text-base">Choose time</h4>
-
+<article class=" min-h-[25px]">
           <AppointmentsTimes
             @selectAvailabilityTime="selectAvailabilityTime"
             v-if="selectedAvailabilityDate"
             :selectedAvailabilityDate="selectedAvailabilityDate"
           ></AppointmentsTimes>
+          <p v-else class=" text-sm text-$gray flex items-center"> will appear the available times when you slected day</p>
+        </article>
         </section>
       </section>
 
@@ -75,7 +88,11 @@ export default {
     return {
       selectedAvailabilityDate: '',
       selectedAvailabilityTime: '',
+      hideLoading:false
     }
+  },
+  mounted(){
+    this.hideLoading=true
   },
   components: {
     AppointmentsDates: () => import('./-AppointmentsDates.vue'),
