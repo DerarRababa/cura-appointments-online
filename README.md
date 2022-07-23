@@ -10,12 +10,30 @@ $ npm install
 $ npm run dev
 
 # build for production and launch server
-$ npm run build
+$ npm run prod:build
 $ npm run start
 
 # generate static project
 $ npm run generate
 ```
+
+## Project images 
+
+![image](https://user-images.githubusercontent.com/109777953/180591554-cc69cc87-4dac-4cfb-9e08-93836197bc49.png)
+
+#### the app will always redirect you to this URL
+![image](https://user-images.githubusercontent.com/109777953/180591626-18433ec7-cefd-4224-b3f1-7a815a7904ea.png)
+
+
+
+#### I use this package [cross-env](https://www.npmjs.com/package/cross-env) to manage multi environment 
+
+#### I use this package [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper) to control with days swiper
+
+#### I use this package [tailwindcss](https://tailwindcss.com/docs/installation) to mange the design
+
+
+
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
