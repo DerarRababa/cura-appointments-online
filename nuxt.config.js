@@ -53,6 +53,25 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
+
+  i18n: {
+    locales: [
+      { code: "en", iso: "en", lang: "en", file: "en-en.js", dir: "ltr" },
+     
+      { code: "ar", iso: "ar", lang: "ar", file: "ar-ar.js", dir: "rtl" },
+     
+     
+    ],
+    strategy: "prefix_and_default",
+    detectBrowserLanguage: false,
+    defaultLocale: "en",
+    lazy: true,
+    langDir: "i18n/",
+    vueI18n: {
+      fallbackLocale: "en",
+    },
+  },
+
   //add env attributs
   env: {
     NODE_ENV: process.env.NODE_ENV,
