@@ -5,6 +5,7 @@ export const state = () => ({
 
 export const mutations = {
   SET_AVAILABLE_APPOINTMENT(state, payload) {
+    console.log("ssssssssss",JSON.parse(payload))
     state.availableAppointments = JSON.parse(payload)
   },
   TOGGLE_BTN_BOOK_APPOINTMENT_LOADING(state, payload) {

@@ -19,6 +19,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+
+  router: {
+    middleware: ["redirect-to-appointment"],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/css/main.css", "~/assets/css/swiper.css"],
 
@@ -48,6 +53,7 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
+
   //add env attributs
   env: {
     NODE_ENV: process.env.NODE_ENV,
