@@ -19,6 +19,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+
+  router: {
+    middleware: ["redirect-to-appointment"],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/css/main.css", "~/assets/css/swiper.css"],
 
