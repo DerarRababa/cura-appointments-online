@@ -54,8 +54,6 @@ export default {
     baseURL: '/',
   },
 
- 
-
   //add env attributs
   env: {
     NODE_ENV: process.env.NODE_ENV,
